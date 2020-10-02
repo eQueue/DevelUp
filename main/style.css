@@ -1,0 +1,168 @@
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+ol, h1, h2, p {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+
+body {
+	background-image: url(https://bada-ie.com/bbs/data/all/o_file/735891_1422804747.jpg);
+    background-size : relative;
+    float : center;
+}
+
+.wrapper {
+    position: relative;
+    margin : auto;
+	width: 870px;
+	
+}
+
+.title {
+    border-bottom : 1px solid #aaa;
+	color: black;
+	text-indent: 1.5em;
+	padding: 50px 20px 0 0;
+	position: relative;
+}
+
+.chart {
+    border-radius: 15px;
+	background-color: white;
+	overflow: hidden;
+	counter-reset: rank;
+}
+
+.chart-item {
+    border-radius : 15px;
+	margin: 60px 60px 60px 60px;
+	height: 80px;
+	position: relative;
+	counter-increment: rank;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.book {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: all .5s;
+	overflow: hidden;
+}
+
+.book:before {
+	content: counter(rank);
+	font-size: 50px;
+	padding: 10px;
+	width: 1em;
+	text-align: right;
+	margin-right: 0.25em;
+	font-weight: bold;
+	font-style: italic;
+	float: left;
+}
+
+.book:hover {
+    border-radius : 15px;
+	background-color: white;
+	margin: -30px;
+	box-shadow: 0 0 40px rgba(0,0,0,0.4);
+}
+
+.book-cover {
+	float: right;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.book-disc {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	animation-name: spin;
+	animation-duration: .5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transition: right .5s;
+}
+
+.book:hover .book-disc {
+	right: 80px;
+	transition-delay: 1s;
+}
+
+.book-contents {
+    vertical-align:middle;
+	overflow: hidden;
+	padding: 15px;
+}
+
+.book-description {
+	margin-top: 10px;
+	opacity: 0;	
+	transition: opacity .5s;
+}
+
+.book:hover .book-description {
+	transition-delay: .5s;
+	opacity: 1;
+}
+
+.book:hover:before {
+	color: green;
+}
+
+.menu{
+    position: absolute;
+    top: 10px;
+    right: -70px;
+    
+    margin : 0;
+    padding : 0;
+}
+
+.menu-item{
+    display : flex;
+    align-items : center;
+    vertical-align : middle;
+    position : relative;
+    
+    color : white;
+    
+    width : 70px;
+    height : 30px;
+    margin-top : 10px;
+    background-color : #1abc9c;
+    border-radius : 0 5px 5px 0;
+    border : 2px solid #1abc9c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
